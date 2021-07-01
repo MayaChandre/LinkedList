@@ -8,13 +8,15 @@ public class LinkedList {
 		 int data;
 		 Node next;
 		 
-		 public Node(int data) {
+		 public Node(int data)
+		 {
 			 this.data = data;
 			 this.next = null;
 		 }
 	 }
 	 // appending data
-	public void insert (int data) {
+	public Node insert (int data)
+	{
 			
 			Node newNode = new Node(data);
 			if (head == null) {
@@ -26,6 +28,7 @@ public class LinkedList {
 				}
 				temp.next = newNode;
 			}
+			return newNode;
 		}
 
        //method to push
@@ -45,4 +48,18 @@ public class LinkedList {
 			System.out.println();
 		}
 
+		// method to insert after a node
+		public void insertAfter(Node prevNode, int value) {
+
+			if (prevNode == null) {
+			System.out.println("Prev Node should not be null");
+			return;
+			}
+			
+			Node newNode = new Node(value);
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
+
+			
+			}
 }

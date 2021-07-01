@@ -5,10 +5,9 @@ public class Node {
 	public static void main(String[] args) {
 		
 				LinkedList linkedList=new LinkedList();
-				linkedList.push(70);
-				linkedList.push(30);
-				linkedList.push(56);
-				
+				LinkedList.Node prevNode = linkedList.insert(56);
+				linkedList.insertAfter(prevNode, 70);
+				linkedList.insertAfter(prevNode, 30);
 				linkedList.print();	
 				}
 		}
