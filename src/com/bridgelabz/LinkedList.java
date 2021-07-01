@@ -13,7 +13,7 @@ public class LinkedList {
 			 this.next = null;
 		 }
 	 }
-	 // to insert data
+	 // appending data
 	public void insert (int data) {
 			
 			Node newNode = new Node(data);
@@ -27,16 +27,6 @@ public class LinkedList {
 				temp.next = newNode;
 			}
 		}
-
-		public void print() {
-			Node temp = head;
-			while(temp!=null) {
-				System.out.print(temp.data+"->");
-				temp = temp.next;
-			}
-			System.out.println();
-		}
-
 
        //method to push
 		public void push(int data) {

@@ -8,7 +8,7 @@ public class Node {
 				linkedList.push(70);
 				linkedList.push(30);
 				linkedList.push(56);
-				System.out.println("LinkedList:");
+				
 				linkedList.print();	
 				}
 		}
